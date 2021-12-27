@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BtoBet-Task-1</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Login Page -->
+      <section class="signIn-page" id="signIn">
+        <div class="menuBar"></div>
+        <form action="#" id="loginPageForm">
+          <div>
+            <input
+              type="text"
+              name="username"
+              id="loginPageUsername"
+              placeholder="What's Your Username?"
+              required
+            />
+            <label for="loginPageUsername">Username</label>
+            <p class="errorUsername">Your username is not correct</p>
+          </div>
+          <div>
+            <input
+              type="password"
+              name="passwordLoginPage"
+              id="loginPagePassword"
+              placeholder="Type Your Password Here"
+              required
+            />
+            <label for="loginPagePassword">Password</label>
+            <p class="errorPassword">Your password is not correct</p>
+          </div>
+          <button type="submit" id="submitBtnLogin">Login</button>
+          <!-- <button type="button" id="submitBtnsignUp">Register</button> -->
+        </form>
+      </section>
+      <!--  -->
+      <!-- Register Page -->
+      <section class="signUp-form" id="signUp">
+        <div class="popUpBanner"></div>
+        <div class="menuBar"></div>
+        <form action="#" id="signUpForm">
+          <div>
+            <div>
+              <input
+                type="text"
+                id="newUserFirstName"
+                required
+                placeholder="First Name"
+              />
+              <label for="newUserFirstName">First Name</label>
+
+              <input
+                type="text"
+                id="newUserLastName"
+                required
+                placeholder="Last Name"
+              />
+              <label for="newUserLastName">Last Name</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="newUserUsername"
+                required
+                placeholder="Username"
+              />
+              <label for="newUserUsername">Username</label>
+
+              <input
+                type="email"
+                id="newUserEmail"
+                required
+                placeholder="Email"
+              />
+              <label for="newUserEmail">Email</label>
+            </div>
+
+            <div>
+              <input
+                type="tel"
+                id="newUserPhone"
+                required
+                placeholder="Phone"
+              />
+              <label for="newUserPhone">Phone</label>
+              <input
+                type="password"
+                id="newUserPassword"
+                required
+                placeholder="Password"
+              />
+              <label for="newUserPassword">Password</label>
+            </div>
+          </div>
+          <div>
+            <button type="submit" id="signUpNow">Register</button>
+          </div>
+        </form>
+      </section>
+      <!-- Private Page pass protected -->
+      <section class="privatePage1">
+        <header id="eventPage">
+          <!-- Navbar -->
+        </header>
+        <main class="events">
+          <section class="addNewEvent">
+            <h1>Add New Event</h1>
+            <form action="#" id="addNewEventForm">
+              <h3 class="popupErrorAddEvent"></h3>
+              <h3 class="confirmMessage">
+                Your event was added to List Events
+              </h3>
+              <label for="addNewEventForm">Your Event Name</label>
+              <input
+                type="text"
+                name="Name"
+                id="eventNameInput"
+                placeholder="Event Name"
+              />
+              <label for="eventDateInput">Your Event Date</label>
+              <input
+                type="date"
+                name="date"
+                id="eventDateInput"
+                placeholder="Event Date"
+                min="2021-12-23"
+                max="2022-12-23"
+              />
+              <label for="eventDescrInput">Your Event Description</label>
+              <textarea
+                style="resize: none"
+                name="description"
+                id="eventDescrInput"
+                cols="30"
+                rows="3"
+              ></textarea>
+              <input
+                type="submit"
+                name="addEvent"
+                id="addNewEventBtn"
+                value="Add New Event"
+              />
+            </form>
+          </section>
+
+          <section class="editEvent">
+            <!--  -->
+            <h1 id="noMoreEvents">Editing Page</h1>
+            <form action="#" id="editItemForm">
+              <input type="text" name="editName" id="editName" />
+              <input type="date" name="editDate" id="editDate" />
+              <textarea
+                style="resize: none"
+                name="editDescr"
+                id="editDescr"
+                cols="30"
+                rows="2"
+              ></textarea>
+              <button id="updateItemBtn" type="submit">Update Event</button>
+              <button id="cancelItemBtn">Cancel</button>
+            </form>
+          </section>
+
+          <section class="eventList">
+            <h2 class="eventListTitle">List Event Page</h2>
+            <table class="postList">
+              <tbody class="postList__body"></tbody>
+            </table>
+            <div class="popupDelete">
+              <div>
+                <h3 class="titleDelete">
+                  Are you sure you want to delete this event?
+                </h3>
+                <button class="yesDelete">Yes</button>
+                <button class="noDelete">No</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </section>
+      <!--  -->
+    </main>
+    <script src="/App/app.js" type="module"></script>
+  </body>
+</html>

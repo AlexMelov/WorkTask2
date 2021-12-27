@@ -1,0 +1,134 @@
+@import "loginPage";
+
+.postList {
+  &__item {
+    border: 1px solid black;
+    background-color: rgb(255, 237, 213);
+    color: rgb(107, 107, 107);
+  }
+}
+
+.privatePage1 {
+  @media (max-width: 800px) {
+    overflow: auto;
+  }
+  font-family: sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to top, rgb(153, 153, 153), rgb(255, 255, 255));
+  & h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(211, 211, 211);
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  .addNewEvent,
+  .editEvent {
+    & form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(10%);
+      @media (max-width: 581px) {
+        transform: translateY(0%);
+      }
+
+      & input {
+        @include input();
+        width: 300px;
+        margin-bottom: 15px;
+        @media (max-width: 581px) {
+          height: 4vh;
+        }
+      }
+      & label {
+        @include label();
+        margin-top: 10px;
+      }
+      & textarea {
+        @include label();
+        width: 310px;
+      }
+      & input#addNewEventBtn {
+        @include button();
+        margin-top: 15px;
+        @media (max-width: 581px) {
+          height: 6vh;
+        }
+      }
+      & button {
+        @include button();
+        height: 5vh;
+      }
+    }
+  }
+}
+.editEvent {
+  & form {
+    & button {
+      margin-top: 5px;
+    }
+  }
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+
+  @media (max-width: 800px) {
+    font-size: 0.8rem;
+    width: auto;
+  }
+}
+
+table {
+  margin-top: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+  // border: 1px solid black;
+  background-color: #fff;
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+}
+.deleteBtn,
+.editBtn {
+  @include button();
+  box-shadow: 1px 1px 15px rgba($color: #000000, $alpha: 0.3);
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 800px) {
+    padding: 0;
+    border-radius: 0;
+    height: 3vh;
+  }
+}
+
+.confirmMessage {
+  // display: none;
+  opacity: 0;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  transition: all 0.5s ease;
+}
+.eventListTitle {
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(211, 211, 211);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.popupErrorAddEvent {
+  // margin-bottom: 3rem;
+  font-size: 0.8rem;
+  font-weight: normal;
+}

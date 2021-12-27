@@ -1,0 +1,182 @@
+.errorUsername,
+.errorPassword {
+  display: none;
+}
+@mixin input {
+  min-height: 3vh;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+
+  &:focus,
+  &:visited {
+    outline: none;
+    border: none;
+  }
+}
+@mixin button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($color: rgb(5, 81, 143), $amount: 10);
+    color: #fff;
+    cursor: pointer;
+  }
+}
+@mixin label {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+.signIn-page,
+.signUp-form {
+  position: relative;
+  font-family: sans-serif;
+  background: linear-gradient(to top, rgb(153, 153, 153), rgb(255, 255, 255));
+  height: 100vh;
+  width: 100%;
+}
+#loginPageForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 581px) {
+    top: 40%;
+    left: 50%;
+  }
+
+  & input {
+    @include input();
+  }
+  & label {
+    @include label();
+    @media (max-width: 581px) {
+      font-size: 0.8rem;
+    }
+  }
+  & button {
+    @include button();
+    width: auto;
+    font-size: 1.1rem;
+    height: 4vh;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-top: 15px;
+    @media (max-width: 581px) {
+      width: 170px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.signUp-form {
+  overflow: hidden;
+  & form {
+    width: 400px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    @media (max-width: 581px) {
+      width: 200px;
+      justify-content: center;
+      align-items: center;
+      top: 40%;
+    }
+    & div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      & input {
+        @include input();
+        @media (max-width: 581px) {
+          height: 4vh;
+        }
+      }
+      & label {
+        @include label();
+        @media (max-width: 581px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    & button {
+      @include button();
+      margin: 20px 20px 0 0;
+    }
+  }
+}
+
+.menuBar {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(218, 218, 218);
+  padding: 15px;
+  border-radius: 0px 0px 50px 50px;
+  & button {
+    @include button();
+    margin: 0 15px;
+    height: 4vh;
+  }
+}
+
+.popUpErrorSignUp {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.popupDelete {
+  display: none;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  & div {
+    background: white;
+    padding: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(107, 107, 107);
+    text-align: center;
+    border-radius: 15px;
+
+    & button {
+      @include button();
+      background-color: rgb(187, 0, 0);
+      color: white;
+      margin: 10px 5px;
+    }
+    & button:last-of-type {
+      @include button();
+      background-color: grey;
+      color: white;
+      margin: 10px 5px;
+    }
+  }
+}
+.eventList {
+  padding: 1rem;
+}

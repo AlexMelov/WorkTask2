@@ -1,0 +1,1078 @@
+@import url("https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+header {
+  height: 5vh;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 2rem 1rem;
+  }
+}
+
+.navbar .hambLink {
+  text-decoration: none;
+}
+
+@media (min-width: 801px) {
+  .navbar .hambLink {
+    display: none;
+  }
+}
+
+.navbar .fa-bars {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: grey;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  text-decoration: none;
+}
+
+.navbar .fa-bars:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+@media (max-width: 800px) {
+  .navbar .fa-bars {
+    display: block;
+  }
+}
+
+.navbar__logo {
+  width: 30px;
+}
+
+@media (max-width: 800px) {
+  .navbar__logo {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.navbar__logo img {
+  display: block;
+  width: 100%;
+}
+
+.navbar__logo img:hover {
+  cursor: pointer;
+}
+
+.navbar__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 800px) {
+  .navbar__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 10px;
+  }
+}
+
+.navbar__items--item {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  border: 1px solid black;
+  padding: 7px 15px;
+  list-style-type: none;
+  margin: 0 1%;
+  white-space: nowrap;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.35);
+  background-color: white;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+@media (max-width: 800px) {
+  .navbar__items--item {
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+    z-index: 111;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 801px) {
+  .navbar__items--item {
+    display: block;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.navbar__items--item:hover {
+  display: block;
+  cursor: pointer;
+  background-position: 100%;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  background-image: linear-gradient(150deg, transparent 0%, transparent 50%, #03355e 50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-size: 290%;
+}
+
+.navbar__items--item:active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.navbar__items--item a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #7c7c7c;
+  display: block;
+}
+
+.navbar__items--item a:hover {
+  color: white;
+}
+
+.navbar__input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar__input input#searchBtn {
+  height: 3.5vh;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__input ::-webkit-input-placeholder {
+  color: #7c7c7c;
+  font-size: 1rem;
+}
+
+.navbar__input :-ms-input-placeholder {
+  color: #7c7c7c;
+  font-size: 1rem;
+}
+
+.navbar__input ::-ms-input-placeholder {
+  color: #7c7c7c;
+  font-size: 1rem;
+}
+
+.navbar__input ::placeholder {
+  color: #7c7c7c;
+  font-size: 1rem;
+}
+
+.errorUsername,
+.errorPassword {
+  display: none;
+}
+
+.signIn-page,
+.signUp-form {
+  position: relative;
+  font-family: sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, from(#999999), to(white));
+  background: linear-gradient(to top, #999999, white);
+  height: 100vh;
+  width: 100%;
+}
+
+#loginPageForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 581px) {
+  #loginPageForm {
+    top: 40%;
+    left: 50%;
+  }
+}
+
+#loginPageForm input {
+  min-height: 3vh;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+}
+
+#loginPageForm input:focus, #loginPageForm input:visited {
+  outline: none;
+  border: none;
+}
+
+#loginPageForm label {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+@media (max-width: 581px) {
+  #loginPageForm label {
+    font-size: 0.8rem;
+  }
+}
+
+#loginPageForm button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: auto;
+  font-size: 1.1rem;
+  height: 4vh;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-top: 15px;
+}
+
+#loginPageForm button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 581px) {
+  #loginPageForm button {
+    width: 170px;
+    font-size: 1rem;
+  }
+}
+
+.signUp-form {
+  overflow: hidden;
+}
+
+.signUp-form form {
+  width: 400px;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -40%);
+          transform: translate(-40%, -40%);
+}
+
+@media (max-width: 581px) {
+  .signUp-form form {
+    width: 200px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 40%;
+  }
+}
+
+.signUp-form form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUp-form form div input {
+  min-height: 3vh;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+}
+
+.signUp-form form div input:focus, .signUp-form form div input:visited {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 581px) {
+  .signUp-form form div input {
+    height: 4vh;
+  }
+}
+
+.signUp-form form div label {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+@media (max-width: 581px) {
+  .signUp-form form div label {
+    font-size: 0.8rem;
+  }
+}
+
+.signUp-form form button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 20px 20px 0 0;
+}
+
+.signUp-form form button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menuBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #dadada;
+  padding: 15px;
+  border-radius: 0px 0px 50px 50px;
+}
+
+.menuBar button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0 15px;
+  height: 4vh;
+}
+
+.menuBar button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popUpErrorSignUp {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.popupDelete {
+  display: none;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100vw;
+}
+
+.popupDelete div {
+  background: white;
+  padding: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #6b6b6b;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.popupDelete div button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #bb0000;
+  color: white;
+  margin: 10px 5px;
+}
+
+.popupDelete div button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popupDelete div button:last-of-type {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: grey;
+  color: white;
+  margin: 10px 5px;
+}
+
+.popupDelete div button:last-of-type:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.eventList {
+  padding: 1rem;
+}
+
+.errorUsername,
+.errorPassword {
+  display: none;
+}
+
+.signIn-page,
+.signUp-form {
+  position: relative;
+  font-family: sans-serif;
+  background: -webkit-gradient(linear, left bottom, left top, from(#999999), to(white));
+  background: linear-gradient(to top, #999999, white);
+  height: 100vh;
+  width: 100%;
+}
+
+#loginPageForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 581px) {
+  #loginPageForm {
+    top: 40%;
+    left: 50%;
+  }
+}
+
+#loginPageForm input {
+  min-height: 3vh;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+}
+
+#loginPageForm input:focus, #loginPageForm input:visited {
+  outline: none;
+  border: none;
+}
+
+#loginPageForm label {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+@media (max-width: 581px) {
+  #loginPageForm label {
+    font-size: 0.8rem;
+  }
+}
+
+#loginPageForm button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: auto;
+  font-size: 1.1rem;
+  height: 4vh;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-top: 15px;
+}
+
+#loginPageForm button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 581px) {
+  #loginPageForm button {
+    width: 170px;
+    font-size: 1rem;
+  }
+}
+
+.signUp-form {
+  overflow: hidden;
+}
+
+.signUp-form form {
+  width: 400px;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -40%);
+          transform: translate(-40%, -40%);
+}
+
+@media (max-width: 581px) {
+  .signUp-form form {
+    width: 200px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 40%;
+  }
+}
+
+.signUp-form form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUp-form form div input {
+  min-height: 3vh;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+}
+
+.signUp-form form div input:focus, .signUp-form form div input:visited {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 581px) {
+  .signUp-form form div input {
+    height: 4vh;
+  }
+}
+
+.signUp-form form div label {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+@media (max-width: 581px) {
+  .signUp-form form div label {
+    font-size: 0.8rem;
+  }
+}
+
+.signUp-form form button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 20px 20px 0 0;
+}
+
+.signUp-form form button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menuBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #dadada;
+  padding: 15px;
+  border-radius: 0px 0px 50px 50px;
+}
+
+.menuBar button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0 15px;
+  height: 4vh;
+}
+
+.menuBar button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popUpErrorSignUp {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.popupDelete {
+  display: none;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100vw;
+}
+
+.popupDelete div {
+  background: white;
+  padding: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #6b6b6b;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.popupDelete div button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #bb0000;
+  color: white;
+  margin: 10px 5px;
+}
+
+.popupDelete div button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popupDelete div button:last-of-type {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: grey;
+  color: white;
+  margin: 10px 5px;
+}
+
+.popupDelete div button:last-of-type:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.eventList {
+  padding: 1rem;
+}
+
+.postList__item {
+  border: 1px solid black;
+  background-color: #ffedd5;
+  color: #6b6b6b;
+}
+
+.privatePage1 {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#999999), to(white));
+  background: linear-gradient(to top, #999999, white);
+}
+
+@media (max-width: 800px) {
+  .privatePage1 {
+    overflow: auto;
+  }
+}
+
+.privatePage1 h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: lightgray;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.privatePage1 .addNewEvent form,
+.privatePage1 .editEvent form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+@media (max-width: 581px) {
+  .privatePage1 .addNewEvent form,
+  .privatePage1 .editEvent form {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.privatePage1 .addNewEvent form input,
+.privatePage1 .editEvent form input {
+  min-height: 3vh;
+  outline: none;
+  border: none;
+  margin: 5px 0;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.privatePage1 .addNewEvent form input:focus, .privatePage1 .addNewEvent form input:visited,
+.privatePage1 .editEvent form input:focus,
+.privatePage1 .editEvent form input:visited {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 581px) {
+  .privatePage1 .addNewEvent form input,
+  .privatePage1 .editEvent form input {
+    height: 4vh;
+  }
+}
+
+.privatePage1 .addNewEvent form label,
+.privatePage1 .editEvent form label {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.privatePage1 .addNewEvent form textarea,
+.privatePage1 .editEvent form textarea {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  margin-left: 10px;
+  width: 310px;
+}
+
+.privatePage1 .addNewEvent form input#addNewEventBtn,
+.privatePage1 .editEvent form input#addNewEventBtn {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.privatePage1 .addNewEvent form input#addNewEventBtn:hover,
+.privatePage1 .editEvent form input#addNewEventBtn:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 581px) {
+  .privatePage1 .addNewEvent form input#addNewEventBtn,
+  .privatePage1 .editEvent form input#addNewEventBtn {
+    height: 6vh;
+  }
+}
+
+.privatePage1 .addNewEvent form button,
+.privatePage1 .editEvent form button {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 5vh;
+}
+
+.privatePage1 .addNewEvent form button:hover,
+.privatePage1 .editEvent form button:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.editEvent form button {
+  margin-top: 5px;
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  table,
+  td,
+  th {
+    font-size: 0.8rem;
+    width: auto;
+  }
+}
+
+table {
+  margin-top: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: #fff;
+}
+
+@media (max-width: 800px) {
+  th,
+  td {
+    padding: 0;
+  }
+}
+
+.deleteBtn,
+.editBtn {
+  width: 140px;
+  height: 3vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.deleteBtn:hover,
+.editBtn:hover {
+  background-color: #03355e;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .deleteBtn,
+  .editBtn {
+    padding: 0;
+    border-radius: 0;
+    height: 3vh;
+  }
+}
+
+.confirmMessage {
+  opacity: 0;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.eventListTitle {
+  text-align: center;
+  margin-top: 50px;
+  color: lightgray;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.popupErrorAddEvent {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
